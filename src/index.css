@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* WooCommerce Dashboard Design System
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* WooCommerce inspired theme with light blue primary */
+    --background: 0 0% 100%;
+    --foreground: 220 13% 18%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 13% 18%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 13% 18%;
+
+    /* WooCommerce light blue theme */
+    --primary: 210 90% 50%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 210 90% 45%;
+    --primary-light: 210 90% 95%;
+
+    /* Success green for completed orders */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --success-light: 142 76% 95%;
+
+    /* Warning orange for pending orders */
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --warning-light: 38 92% 95%;
+
+    /* Error red for failed orders */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --destructive-light: 0 84% 95%;
+
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 220 13% 18%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+
+    --accent: 210 90% 96%;
+    --accent-foreground: 210 90% 50%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 210 90% 50%;
+
+    /* Layout */
+    --radius: 0.75rem;
+    --shadow-sm: 0 1px 2px 0 hsl(220 13% 18% / 0.05);
+    --shadow: 0 4px 6px -1px hsl(220 13% 18% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(220 13% 18% / 0.1);
+
+    /* Mobile-first spacing */
+    --mobile-padding: 1rem;
+    --mobile-gap: 0.75rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(210 90% 45%));
+    --gradient-success: linear-gradient(135deg, hsl(var(--success)), hsl(142 76% 30%));
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%), hsl(220 14% 98%));
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark theme */
+    --background: 222 84% 5%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 84% 5%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 84% 5%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Keep WooCommerce light blue in dark mode */
+    --primary: 210 90% 55%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 210 90% 50%;
+    --primary-light: 210 90% 15%;
+
+    /* Adjusted colors for dark theme */
+    --success: 142 76% 40%;
+    --success-foreground: 0 0% 100%;
+    --success-light: 142 76% 15%;
+
+    --warning: 38 92% 55%;
+    --warning-foreground: 0 0% 100%;
+    --warning-light: 38 92% 15%;
+
+    --destructive: 0 84% 65%;
+    --destructive-foreground: 0 0% 100%;
+    --destructive-light: 0 84% 15%;
+
+    --secondary: 217 32% 18%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 32% 18%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 210 90% 15%;
+    --accent-foreground: 210 90% 55%;
+
+    --border: 217 32% 18%;
+    --input: 217 32% 18%;
+    --ring: 210 90% 55%;
+
+    /* Dark gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(210 90% 55%), hsl(210 90% 50%));
+    --gradient-success: linear-gradient(135deg, hsl(142 76% 40%), hsl(142 76% 35%));
+    --gradient-card: linear-gradient(135deg, hsl(222 84% 5%), hsl(217 32% 10%));
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
